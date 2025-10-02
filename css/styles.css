@@ -1,0 +1,604 @@
+/*Permite adicionar uma fonte personalizada que não está instalada no computador do usuário.*/
+@font-face { 
+/*Dá um nome à fonte personalizada.*/
+font-family: 'senja_mentari'; 
+/*src:: Define o caminho para o arquivo da fonte (.otf), que está numa pasta acima (../) dentro de senja_mentari/.*/
+/*format('opentype'): Especifica o formato da fonte, ajudando o navegador a processá-la corretamente.*/
+  src: url('../senja_mentari/Senja\ Mentari\ Demo.otf') format('opentype');
+}
+
+/*Remove margens e preenchimentos padrões aplicados pelo navegador.*/
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*Garante que a largura e altura de um elemento incluam o padding e a borda, facilitando o controle do layout.*/
+}
+
+/*Remove margens e preenchimentos padrão do body e html, garantindo que a página use todo o espaço disponível da tela.*/
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* para remover o scroll horizontal */
+}
+
+header h1, header h2, header p {
+  margin: 0; /* remove margem interna dos textos do header */
+}
+
+header{
+  color: white;
+  font-family:'senja_mentari';
+  font-size: 100px;
+  background-color: rgb(89, 52, 150);
+  height: auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  display: flex;             /* Para centralizar */
+  flex-direction: column;    /* Empilha o nome e o nav um em cima do outro */
+  align-items: center;       /* Centraliza horizontalmente */
+  justify-content: center;   /* Centraliza verticalmente */
+  position: sticky;
+}
+
+nav{
+  color: black;
+  background-color: white;
+  font-size: 50px;
+  height: 40px;
+  font-size: 25px;
+  font-family:  Courier;
+  display: flex; /* Distribui os links lado a lado */
+  align-items: center;     /* Centraliza verticalmente */
+  flex-wrap: wrap;                /* Quebra os links em telas pequenas */
+  justify-content: center;        /* Centraliza os links */
+  width: 100%;
+  position: sticky;
+}
+
+.menu{
+  text-decoration: none;
+  color: black;
+  padding: 0 15px;         /* Espaço horizontal */
+  height: 100%;            /* Ocupa toda a altura do nav */
+  display: flex;           /* Permite alinhamento interno */
+  align-items: center;     /* Alinha o texto verticalmente */
+  
+  
+}
+
+.menu:hover{
+  background-color: rgb(89, 52, 150);
+  color: white;
+}
+
+.container{
+  width: 100%;
+  height:100%;
+}
+
+.foto-redonda {
+  width: 500px;        
+  height: 500px;
+  border-radius: 50%;  /* deixa redonda */
+  object-fit: cover;   /* evita distorção */
+  display: block;
+  margin: 20px auto;   /* centraliza */
+  margin-left: 40px;
+  max-width: 100%;
+}
+
+.destaque{
+  font-size:80px ;
+  position: relative;
+  margin-left: 38%;
+  margin-top:-495px; /*mudar*/  
+  color: rgb(89, 52, 150);
+  
+}
+
+.texto{
+  font-size: 30px;
+  position: relative;
+  margin-left: 38%;
+  text-align: justify;
+  margin-right: 2%;
+  margin-top: 1%;
+}
+
+.rodape {
+  background-color: rgb(89, 52, 150);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  margin-top: 40px;
+  height: 200px;
+}
+
+.rodape .icones {
+  margin: 10px 0;
+}
+
+.rodape a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.rodape a:hover {
+  text-decoration: underline;
+  color: rgb(220, 200, 255);
+}
+
+.obmep{
+  height: 30%;
+  width: 30%;
+  position: relative;
+  border-radius: 5%;  /* deixa redonda */
+  object-fit: cover;   /* evita distorção */
+  display: block;
+  margin: 20px auto;   /* centraliza */
+  margin-left: 5%;
+  margin-top: -36%;
+
+} 
+
+.origem{
+  display: flex;
+  justify-content: center;    /* centraliza horizontalmente */
+  align-items: center;        /* centraliza verticalmente */
+  flex-direction: column;     /* empilha título e texto um abaixo do outro */
+  background-color: rgb(237, 211, 247);
+  height: 600px;
+  padding: 40px;
+  text-align: justify;
+  font-size: 150%;
+  box-sizing: border-box;
+  /*border-radius: 10%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;*/
+  
+}
+
+.destaque2{
+  font-size:80px ;
+  position: relative;
+  color: rgb(89, 52, 150);
+  text-align: center;
+  
+}
+
+.destaque_origem{
+  margin-left: 30%;
+  font-size:80px ;
+  position: relative;
+  color: rgb(89, 52, 150);
+  text-align: center;
+  margin-top: -5%;
+}
+
+.texto{
+  line-height: 1.5;
+}
+
+.curso{
+  display: flex;
+  justify-content: center;    /* centraliza horizontalmente */
+  align-items: center;        /* centraliza verticalmente */
+  flex-direction: column;     /* empilha título e texto um abaixo do outro */
+  background-color: rgb(230, 185, 247);
+  height: 400px;
+  padding: 40px;
+  text-align: justify;
+  font-size: 180%;
+  box-sizing: border-box;
+  margin-top: 2.9%;
+  line-height: 1.5;
+}
+
+.habilidades{
+  display: flex;
+  justify-content: center;    /* centraliza horizontalmente */
+  align-items: center;        /* centraliza verticalmente */
+  flex-direction: column;     /* empilha título e texto um abaixo do outro */
+  background-color: rgb(219, 160, 240);
+  height: 600px;
+  padding: 40px;
+  text-align: justify;
+  font-size: 180%;
+  box-sizing: border-box;
+  margin-top: 0.2%;
+  line-height: 1.5;
+}
+
+.destaque_habilidades{
+  font-size:80px ;
+  position: relative;
+  color: rgb(89, 52, 150);
+  text-align: center;
+  margin-top: -3.2%;
+}
+
+.curiosidadesdiv{
+  display: flex;
+  justify-content: center;    /* centraliza horizontalmente */
+  align-items: center;        /* centraliza verticalmente */
+  flex-direction: column;     /* empilha título e texto um abaixo do outro */
+  background-color: rgb(206, 102, 244);
+  min-height: 800px;
+  padding: 40px;
+  text-align: justify;
+  font-size: 180%;
+  box-sizing: border-box;
+  margin-top: 0.2%;
+  line-height: 1.5;
+}
+
+.lista_curiosidades{
+  margin-left: 42%;
+}
+
+.destaque_curiosidades{
+  font-size:80px ;
+  position: relative;
+  color: rgb(89, 52, 150);
+  text-align: center;
+  margin-top: -2%;
+  margin-left: 28%;
+}
+
+.curiosidades{
+  height: 34%;
+  width: 34%;
+  position: relative;
+  border-radius: 5%;  /* deixa redonda */
+  object-fit: cover;   /* evita distorção */
+  display: block;
+  margin: 20px auto;   /* centraliza */
+  margin-left: 2%;
+  margin-top: -49.5%;
+  max-width: fit-content;
+  max-height: fit-content;
+  
+}
+
+.links_importantes{
+  display: flex;
+  justify-content: center;    /* centraliza horizontalmente */
+  align-items: center;        /* centraliza verticalmente */
+  flex-direction: column;     /* empilha título e texto um abaixo do outro */
+  background-color: rgb(182, 13, 243);
+  height: 250px;
+  padding: 40px;
+  text-align: justify;
+  font-size: 180%;
+  box-sizing: border-box;
+  margin-top: 3.2%;
+  line-height: 1.5;
+  margin-bottom: -2.35%;
+}
+
+.link{
+  color: #4b0082; 
+  text-decoration: none;
+  font-weight: bold;
+  padding: 2px 4px;
+  border-radius: 6px;
+  transition: 
+    transform 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+  display: inline-block}
+
+a:hover{
+  transform: scale(1.15);
+  color: #35006b; 
+  box-shadow: 0 2px 10px rgba(202, 135, 222, 0.5);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.premiações{
+  display: flex;
+  justify-content: center;    /* centraliza horizontalmente */
+  align-items: center;        /* centraliza verticalmente */
+  flex-direction: column;     /* empilha título e texto um abaixo do outro */
+  background-color: rgb(237, 211, 247);
+  height: 650px;
+  padding: 40px;
+  text-align: justify;
+  font-size: 180%;
+  box-sizing: border-box;
+  margin-top: 0.2%;
+  line-height: 1.5;
+}
+
+.pic{
+  display: flex;
+  justify-content: center;    /* centraliza horizontalmente */
+  align-items: center;        /* centraliza verticalmente */
+  flex-direction: column;     /* empilha título e texto um abaixo do outro */
+  background-color: rgb(230, 185, 247);
+  height: 600px;
+  padding: 40px;
+  text-align: justify;
+  font-size: 180%;
+  box-sizing: border-box;
+  margin-top: 0.2%;
+  line-height: 1.5;
+}
+
+.tho{
+  display: flex;
+  justify-content: center;    /* centraliza horizontalmente */
+  align-items: center;        /* centraliza verticalmente */
+  flex-direction: column;     /* empilha título e texto um abaixo do outro */
+  background-color: rgb(219, 160, 240);
+  height: 600px;
+  padding: 40px;
+  text-align: justify;
+  font-size: 180%;
+  box-sizing: border-box;
+  margin-top: 0.2%;
+  line-height: 1.5;
+}
+
+.je{
+  display: flex;
+  justify-content: center;    /* centraliza horizontalmente */
+  align-items: center;        /* centraliza verticalmente */
+  flex-direction: column;     /* empilha título e texto um abaixo do outro */
+  background-color: rgb(211, 120, 244);
+  height: 600px;
+  padding: 40px;
+  text-align: justify;
+  font-size: 180%;
+  box-sizing: border-box;
+  margin-top: 0.2%;
+  line-height: 1.5;
+}
+
+.ingles{
+  display: flex;
+  justify-content: center;    /* centraliza horizontalmente */
+  align-items: center;        /* centraliza verticalmente */
+  flex-direction: column;     /* empilha título e texto um abaixo do outro */
+  background-color: rgb(199, 72, 245);
+  height: 400px;
+  padding: 40px;
+  text-align: justify;
+  font-size: 180%;
+  box-sizing: border-box;
+  margin-top: 0.2%;
+  line-height: 1.5;
+}
+
+.ceo{
+  display: flex;
+  justify-content: center;    /* centraliza horizontalmente */
+  align-items: center;        /* centraliza verticalmente */
+  flex-direction: column;     /* empilha título e texto um abaixo do outro */
+  background-color: rgb(193, 44, 248);
+  height: 400px;
+  padding: 40px;
+  text-align: justify;
+  font-size: 180%;
+  box-sizing: border-box;
+  margin-top: 0.2%;
+  line-height: 1.5;
+}
+
+.redaçao{
+  display: flex;
+  justify-content: center;    /* centraliza horizontalmente */
+  align-items: center;        /* centraliza verticalmente */
+  flex-direction: column;     /* empilha título e texto um abaixo do outro */
+  background-color: rgb(165, 0, 224);
+  height: 500px;
+  padding: 40px;
+  text-align: justify;
+  font-size: 180%;
+  box-sizing: border-box;
+  margin-top: 0.2%;
+  line-height: 1.5;
+  
+}
+
+.experiencia{
+  display: flex;
+  justify-content: center;    /* centraliza horizontalmente */
+  align-items: center;        /* centraliza verticalmente */
+  flex-direction: column;     /* empilha título e texto um abaixo do outro */
+  background-color: rgb(134, 3, 182);
+  height: 500px;
+  padding: 40px;
+  text-align: justify;
+  font-size: 180%;
+  box-sizing: border-box;
+  line-height: 1.5;
+  margin-bottom: -2.4%;
+  margin-top: 0.2%;
+}
+
+.main_contato {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: rgb(237, 211, 247);
+  color: rgb(89, 52, 150);
+  margin-bottom: -2.7%;
+}
+
+.formulario {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+  color: rgb(89, 52, 150);
+  font-family: 'Times New Roman';
+    
+}
+
+.destaque_formulario {
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: white;
+    
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  background-color: white;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: white;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: rgb(128, 1, 174);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(89, 52, 150);
+}
+
+form {
+  background-color: white;
+}
+
+textarea {
+  resize: none;
+}
+
+
+/*  RESPONSIVIDADE */
+
+@media (max-width: 1024px) {
+  /* Ajusta imagem redonda e texto para telas médias */
+  .foto-redonda {
+  width: 300px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+  .destaque {
+  font-size: 50px;
+  margin-left: 0;
+  margin-top: 20px;
+  text-align: center;
+  }
+
+  .texto {
+  font-size: 22px;
+  margin: 20px;
+  margin-top: 10px;
+  }
+
+  nav {
+  font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Para tablets e celulares em modo retrato */
+  header {
+  font-size: 60px; /* Reduz o tamanho do nome */
+  }
+
+  nav {
+  flex-direction: column;
+  height: auto;
+  }
+
+  .menu {
+  padding: 10px 0;
+  justify-content: center;
+  }
+
+  .destaque {
+    font-size: 40px;
+    margin-top: 20px;
+  }
+
+  .texto {
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  }
+
+  .foto-redonda {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  }
+
+  .rodape {
+  font-size: 14px;
+  padding: 10px;
+  }
+  
+  }
+  @media (max-width: 480px) {
+  /* Para celulares menores */
+  header {
+  font-size: 40px;
+  }
+
+  .destaque, .destaque2, .destaque_origem, .destaque_habilidades, .destaque_curiosidades {
+  font-size: 30px;
+  margin-left: 0;
+  text-align: center;
+  }
+
+  .texto, .curso, .origem, .habilidades, .curiosidadesdiv, .premiações, .pic, .tho, .je, .ingles, .ceo, .redaçao {
+  font-size: 16px;
+  padding: 20px;
+  height: auto;
+  }
+
+  .curiosidades, .obmep {
+  width: 80%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  }
+
+  .lista_curiosidades {
+  margin-left: 0;
+  }
+
+  .links_importantes {
+  font-size: 16px;
+  margin-bottom: 0;
+  }
+}
